@@ -1,3 +1,4 @@
+import { Header } from '@monorepo/common/comps';
 import { bar } from '@monorepo/common/foo';
 import React from 'react';
 import styled from 'styled-components';
@@ -5,7 +6,7 @@ import styled from 'styled-components';
 const App = () => {
   return (
     <>
-      <h1>Welcome to Monorepo Webapp 2!</h1>
+      <Header>Welcome to Monorepo Webapp 2!</Header>
       <InfoText>{bar()}</InfoText>
     </>
   );

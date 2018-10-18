@@ -12,6 +12,9 @@
       "compile": "tsc",
       "test": "jest --colors",
       "lint": "tslint -c ../tslint.json -p tsconfig.json src/**/*.{ts,tsx}",
-      "lint:fix": "yarn lint --fix"
+      "lint:fix": "yarn lint --fix",
+      "lint:style": "stylelint src/**/*.{ts,tsx}",
+      "storybook": "start-storybook -c .storybook -p 7001",
+      "storybook:build": "build-storybook -c .storybook -o dist/storybook"
     }    
   }
