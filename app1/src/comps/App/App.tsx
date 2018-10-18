@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const App = () => {
   return (
     <>
-      <Header>Welcome to Monorepo Webapp 1!</Header>
+      <h1>Welcome to Monorepo Webapp 1!</h1>
       <InfoText>{bar()}</InfoText>
     </>
   );
