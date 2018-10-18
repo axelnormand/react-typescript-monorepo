@@ -29,6 +29,6 @@
     "declarationMap": true, // required for project references
     "noEmit": false // force emit for tsc -b for now 
   },
-  "exclude": ["**/dist", "node_modules", "**/*.test.ts*"],
+  "exclude": ["**/dist", "node_modules", "**/*.test.ts*", "**/*.story.ts*"],
   "compileOnSave": true
 }
