@@ -1,0 +1,22 @@
+{
+  "name": "@monorepo/app1",
+  "description": "Monorepo Webapp1",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/tsc/index.js",
+  "dependencies": {
+    "@monorepo/common": "^1.0.0"    
+  },
+  "scripts": {
+    "clean": "rimraf dist && mkdirp dist",
+    "compile": "tsc",
+    "start": "webpack-dev-server --mode development --open --port 3001",
+    "test": "jest --colors",
+    "build": "webpack --mode production",
+    "lint": "tslint -c ../tslint.json -p tsconfig.json src/**/*.{ts,tsx}",
+    "lint:fix": "yarn lint --fix",
+    "lint:style": "stylelint src/**/*.{ts,tsx}",
+    "storybook": "start-storybook -c .storybook -p 3002",
+    "storybook:build": "build-storybook -c .storybook -o dist/storybook"
+  }
+}

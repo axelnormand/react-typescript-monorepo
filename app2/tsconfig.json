@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".", 
+    "rootDirs": ["src", "."],
+    "outDir": "dist/tsc",
+    "paths": {
+      "src/*": ["src/*"], 
+      "@monorepo/common/*": ["../common/src/*"],
+    }
+  },
+  "include": ["src/**/*"],
+  "references": [
+    { "path": "../common/" },
+  ]
+}

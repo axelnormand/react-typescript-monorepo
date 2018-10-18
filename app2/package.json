@@ -1,6 +1,6 @@
 {
-  "name": "@monorepo/app",
-  "description": "Monorepo Webapp",
+  "name": "@monorepo/app2",
+  "description": "Monorepo Webapp 2",
   "version": "1.0.0",
   "private": true,
   "main": "dist/tsc/index.js",
