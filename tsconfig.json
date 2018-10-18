@@ -1,37 +1,7 @@
+
 {
-  "compilerOptions": {    
-    "composite": true,
-    "lib": ["dom", "esnext"],
-    "target": "esnext",
-    "moduleResolution": "node",
-    "module": "commonjs",
-    "jsx": "react", 
-    "esModuleInterop": true, 
-    "allowSyntheticDefaultImports": true,
-    "noImplicitReturns": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noEmitOnError": true,
-    "noFallthroughCasesInSwitch": true,
-    "strictNullChecks": true,
-    "experimentalDecorators": true,
-    "preserveConstEnums": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowJs": false,
-    "strict": true,
-    "alwaysStrict": true,
-    "pretty": true,
-    "sourceMap": true, 
-    "declaration": true, 
-    "declarationMap": true, 
-    "noEmit": false 
-  },
-  "exclude": [   
-    "**/dist",
-    "node_modules",
-    "**/*.test.ts*"
-  ],  
-  "compileOnSave": true
+  // prevent an incorrect invocation of tsc without -b
+  "files": [], 
+  // listing all projects here allows tsc -b to work
+  "references": [{ "path": "common" }, { "path": "app1" }, { "path": "app2" }]
 }

@@ -1,0 +1,34 @@
+// base config for all projects to extend
+{
+  "compilerOptions": {
+    "composite": true, // required to extend tsconfigs
+    "lib": ["dom", "esnext"],
+    "target": "esnext",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "jsx": "react", // transpile jsx (also for wallaby)
+    "esModuleInterop": true, // allows import React from 'react' rather than import * as React from 'react' (also see allowSyntheticDefaultImports)
+    "allowSyntheticDefaultImports": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "strictNullChecks": true,
+    "experimentalDecorators": true,
+    "preserveConstEnums": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": false,
+    "strict": true,
+    "alwaysStrict": true,
+    "pretty": true,
+    "sourceMap": true,
+    "declaration": true, // required for project references
+    "declarationMap": true, // required for project references
+    "noEmit": false // force emit for tsc -b for now 
+  },
+  "exclude": ["**/dist", "node_modules", "**/*.test.ts*"],
+  "compileOnSave": true
+}

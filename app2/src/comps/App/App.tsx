@@ -1,13 +1,12 @@
-import { Header } from '@monorepo/common/comps';
-import { bar } from '@monorepo/common/foo';
+import { comps, foo } from '@monorepo/common';
 import React from 'react';
 import styled from 'styled-components';
 
 const App = () => {
   return (
     <>
-      <Header>Welcome to Monorepo Webapp 2!</Header>
-      <InfoText>{bar()}</InfoText>
+      <comps.Header>Welcome to Monorepo Webapp 2!</comps.Header>
+      <InfoText>{foo.bar()}</InfoText>
     </>
   );
 };

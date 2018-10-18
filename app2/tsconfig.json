@@ -1,16 +1,15 @@
 {
-  "extends": "../tsconfig.json",
+  "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "baseUrl": ".", 
-    "rootDirs": ["src", "."],
+    "baseUrl": ".", // allow absolute imports to compile eg import Button from 'src/comps/Button'   
+    "rootDir": "src",
     "outDir": "dist/tsc",
     "paths": {
-      "src/*": ["src/*"], 
-      "@monorepo/common/*": ["../common/src/*"],
+      "src/*": ["src/*"], // makes VSCode Auto-Import use absolute imports (from 'src/blah') rather than relative (from '../../blah')
     }
   },
   "include": ["src/**/*"],
   "references": [
-    { "path": "../common/" },
+    { "path": "../common" },
   ]
 }

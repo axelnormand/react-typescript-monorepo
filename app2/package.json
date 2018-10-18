@@ -3,13 +3,12 @@
   "description": "Monorepo Webapp 2",
   "version": "1.0.0",
   "private": true,
-  "main": "dist/tsc/index.js",
   "dependencies": {
     "@monorepo/common": "^1.0.0"    
   },
   "scripts": {
     "clean": "rimraf dist && mkdirp dist",
-    "compile": "tsc",
+    "compile": "tsc -b",
     "start": "webpack-dev-server --mode development --open --port 4001",
     "test": "jest --colors",
     "build": "webpack --mode production",
