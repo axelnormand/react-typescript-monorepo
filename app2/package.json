@@ -10,13 +10,13 @@
   "scripts": {
     "clean": "rimraf dist && mkdirp dist",
     "compile": "tsc",
-    "start": "webpack-dev-server --mode development --open --port 3001",
+    "start": "webpack-dev-server --mode development --open --port 4001",
     "test": "jest --colors",
     "build": "webpack --mode production",
     "lint": "tslint -c ../tslint.json -p tsconfig.json src/**/*.{ts,tsx}",
     "lint:fix": "yarn lint --fix",
     "lint:style": "stylelint src/**/*.{ts,tsx}",
-    "storybook": "start-storybook -c .storybook -p 3002",
+    "storybook": "start-storybook -c .storybook -p 4002",
     "storybook:build": "build-storybook -c .storybook -o dist/storybook"
   }
 }
