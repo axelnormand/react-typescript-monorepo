@@ -1,0 +1,36 @@
+{
+    "search.useIgnoreFiles": true,
+		"editor.tabSize": 2,
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/dist": true,
+		},
+		"search.exclude": {
+			"**/node_modules": true,
+			"**/dist": true,
+			"package-lock.json": true,
+			"yarn.lock": true,
+			"yarn-error.log": true
+		},
+		"tslint.autoFixOnSave": true,
+		"material-icon-theme.files.associations": {
+			"*.story.tsx": "smarty",
+			"*.story.test.ts": "contributing",
+			"*.test.tsx.snap": "sublime",
+			"*.test.ts.snap": "sublime",
+			"*.snap": "sublime",
+			"*.storyshot": "sublime"
+		},
+		"files.associations": {
+			"*.snap": "xml",
+			"*.storyshot": "xml"
+		},		
+		"css.validate": false,
+		"less.validate": false,
+		"scss.validate": false,
+		"react-native-storybooks.port": 7007,  
+} 
