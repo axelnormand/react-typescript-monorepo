@@ -3,14 +3,13 @@
     "description": "Monorepo Common Library",
     "version": "1.0.0",
     "private": true,
-    "main": "dist/tsc/index.js",
-    "typings": "dist/tsc/index.d.ts",
     "dependencies": {
     
     },
     "scripts": {
       "clean": "rimraf dist && mkdirp dist",
-      "compile": "tsc -b",
+      "compile": "tsc",
+      "start": "tsc --watch",
       "test": "jest --colors",
       "lint": "tslint -c ../tslint.json -p tsconfig.json src/**/*.{ts,tsx}",
       "lint:fix": "yarn lint --fix",

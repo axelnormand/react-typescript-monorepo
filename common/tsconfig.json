@@ -6,7 +6,9 @@
     "outDir": "dist/tsc",
     "paths": {
       "src/*": ["src/*"], // makes VSCode Auto-Import use absolute imports (from 'src/blah') rather than relative (from '../../blah')
-    }
+    },
+    "noEmitHelpers": false,
+    "importHelpers": false,
   },
   "include": ["src/**/*"]
 }

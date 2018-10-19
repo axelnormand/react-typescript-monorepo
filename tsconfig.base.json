@@ -27,7 +27,9 @@
     "sourceMap": true,
     "declaration": true, // required for project references
     "declarationMap": true, // required for project references
-    "noEmit": false // force emit for tsc -b for now 
+    "noEmit": false, // force emit for tsc -b for now 
+    "noEmitHelpers": true, // by including tslib in package.json too, this saves bundle size by not including any typescript helper js in our js files
+    "importHelpers": true, // use tslib from package.json
   },
   "exclude": ["**/dist", "node_modules", "**/*.test.ts*", "**/*.story.ts*"],
   "compileOnSave": true

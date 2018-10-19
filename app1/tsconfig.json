@@ -5,7 +5,8 @@
     "rootDir": "src",
     "outDir": "dist/tsc",
     "paths": {
-      "src/*": ["src/*"], // makes VSCode Auto-Import use absolute imports (from 'src/blah') rather than relative (from '../../blah')
+      "src/*": ["src/*"], // makes VSCode Auto-Import use absolute imports (from 'src/blah') rather than relative (from '../../blah')      
+      "@monorepo/common/*": ["../common/src/*"]
     }
   },
   "include": ["src/**/*"],
