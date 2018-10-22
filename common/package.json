@@ -1,20 +1,22 @@
 {
-    "name": "@monorepo/common",
-    "description": "Monorepo Common Library",
-    "version": "1.0.0",
-    "private": true,
-    "dependencies": {
-    
-    },
-    "scripts": {
-      "clean": "rimraf dist && mkdirp dist",
-      "compile": "tsc",
-      "start": "tsc --watch",
-      "test": "jest --colors",
-      "lint": "tslint -c ../tslint.json -p tsconfig.json src/**/*.{ts,tsx}",
-      "lint:fix": "yarn lint --fix",
-      "lint:style": "stylelint src/**/*.{ts,tsx}",
-      "storybook": "start-storybook -c .storybook -p 7001",
-      "storybook:build": "build-storybook -c .storybook -o dist/storybook"
-    }    
+  "name": "@monorepo/common",
+  "description": "Monorepo Common Library",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {},
+  "scripts": {
+    "clean": "rimraf dist && mkdirp dist",
+    "compile": "tsc",
+    "compile:dts": "node generateDTS.js",
+    "start": "tsc --watch",
+    "test": "jest --colors",
+    "lint": "tslint -c ../tslint.json -p tsconfig.json src/**/*.{ts,tsx}",
+    "lint:fix": "yarn lint --fix",
+    "lint:style": "stylelint src/**/*.{ts,tsx}",
+    "storybook": "start-storybook -c .storybook -p 7001",
+    "storybook:build": "build-storybook -c .storybook -o dist/storybook"
+  },
+  "devDependencies": {
+    "dts-generator": "^2.1.0"
   }
+}
