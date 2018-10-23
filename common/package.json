@@ -3,6 +3,7 @@
   "description": "Monorepo Common Library",
   "version": "1.0.0",
   "private": true,
+  "typings": "dist/tsc/index.d.ts",
   "dependencies": {},
   "scripts": {
     "clean": "rimraf dist && mkdirp dist",

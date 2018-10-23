@@ -20,7 +20,7 @@
     "lint:style": "lerna run lint:style",
     "clean": "lerna run clean",
     "build": "lerna run build",
-    "compile": "tsc -b",
+    "compile": "tsc -b common app1 app2",
     "compile:watch": "yarn compile --watch",
     "ci": "yarn clean && yarn tsc && yarn test:ci && yarn lint && yarn lint:style && yarn build",
     "storybook": "lerna run storybook",

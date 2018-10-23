@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+.c0 {
+  font-size: 35px;
+  color: #fbc121;
+}
+
+<div>
+  <h1
+    class="c0"
+  >
+    Test
+  </h1>
+</div>
+`;
