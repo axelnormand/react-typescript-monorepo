@@ -5,24 +5,20 @@
 module.exports = function(wallaby) {
   return {
     files: [
-      '**/src/**/*.ts?(x)',
-      '**/src/**/*.json',
-      '**/src/**/*.snap',
-      '**/assets/**/*.*',
-      '**/package.json',
-      '**/tsconfig.json',
-      '**/jest.config.js',
-      '**/build/jest/**/*',
-      '!**/src/**/*.test.ts?(x)',
+      '**/src/**/*.{ts,tsx}',
+      { pattern: '**/*.json', instrument: false },
+      { pattern: '**/*.js', instrument: false },
+      '!**/src/**/*.test.{ts,tsx}',
+      '!**/src/**/*.story.tsx',
       '!**/node_modules/**/*',
       '!**/dist/**/*',
     ],
-    tests: ['**/src/**/*.test.ts?(x)', '!**/node_modules/**/*'],
+    tests: ['**/src/**/*.test.{ts,tsx}', '!**/node_modules/**/*'],
     env: { type: 'node', runner: 'node' },
     testFramework: 'jest',
 
     // make wallaby following lerna packages
-    setup: w => {
+    setup: () => {
       const jestConfig = require('./jest.config');
       jestConfig.moduleNameMapper = {
         ...jestConfig.moduleNameMapper,
