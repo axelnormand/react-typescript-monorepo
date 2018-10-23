@@ -6,13 +6,12 @@ const config = getJestConfig(__dirname, true);
 
 module.exports = {
   ...config,
-  projects: ["common", "app"],
+  projects: ["common", "app1", "app2"],
   coverageDirectory: './dist/jest',
   collectCoverageFrom: [
     '**/src/**/*.ts',
     '**/src/**/*.tsx',
     '!**/src/**/*.story.tsx',
-    '!**/src/**/index.ts,',
     '!**src/**/*.d.ts',
   ],
 };

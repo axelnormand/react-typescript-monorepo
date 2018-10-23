@@ -8,7 +8,7 @@
       "src/*": ["src/*"]
     },
     "noEmitHelpers": false,
-    "importHelpers": false,
+    "importHelpers": false
   },
   "include": ["src/**/*"]
 }
