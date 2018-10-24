@@ -29,6 +29,6 @@
     "noEmitHelpers": true, 
     "importHelpers": true
   },
-  "exclude": ["**/dist", "node_modules"],
+  "exclude": ["**/dist", "**/build", "node_modules"],
   "compileOnSave": true
 }
