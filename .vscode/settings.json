@@ -5,16 +5,19 @@
 			"**/.git": true,
 			"**/.svn": true,
 			"**/.hg": true,
+			"**/.log": true,
 			"**/CVS": true,
 			"**/.DS_Store": true,
 			"**/dist": true,
+			"**/build": true,
 		},
 		"search.exclude": {
 			"**/node_modules": true,
 			"**/dist": true,
+			"**/build": true,
 			"package-lock.json": true,
-			"yarn.lock": true,
-			"yarn-error.log": true
+			"*.lock": true,
+			"*.log": true
 		},
 		"tslint.autoFixOnSave": true,
 		"material-icon-theme.files.associations": {

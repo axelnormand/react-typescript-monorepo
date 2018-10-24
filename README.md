@@ -25,3 +25,4 @@ Also trying to share build config, tsconfig etc too
 * Getting styled components to have nice css class names
 * Better sourcemaps, not working on the common library at the mo.
 * Cooler webpack stuff like PWA generation etc
+* Use typescript in tools directory and for all those configs
