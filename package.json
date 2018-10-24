@@ -23,7 +23,7 @@
     "clean:dist": "lerna run clean:dist",
     "build": "lerna run build",
     "build:ci": "yarn clean:dist && yarn compile && yarn build && yarn storybook:build",
-    "compile": "tsc -b common components nexus glide portal",
+    "compile": "tsc -b common app1 app2",
     "compile:watch": "yarn compile --watch",
     "storybook": "lerna run storybook",
     "storybook:build": "lerna run storybook:build"
