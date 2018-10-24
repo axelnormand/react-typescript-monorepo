@@ -12,8 +12,16 @@ Also trying to share build config, tsconfig etc too
 
 * Install node
 * `yarn install`
-* `yarn start` : runs app
-* `yarn storybook` : runs storybook for app
+* `yarn start` : runs apps and opens browser tab for each one
+* `yarn storybook` : runs storybook for apps
 * `yarn compile:watch` : compiles, type checks and watches all typescript. Can use form IDE.
-* `yarn test` : runs all jest tests across projects
+* `yarn test:ci` : runs all jest tests across projects, lint, style lint
+* `yarn build:ci`: creates bundles in the app*/dist directories, creates storybook static html in dist dir, analyses bundle in dist dir etc
 
+## TODO
+
+* Jest not working with code coverage: https://github.com/facebook/jest/issues/5417
+* Using babel to transpile typescript would be great, avoids ts-jest and happypack etc, can use babel plugins more easily
+* Getting styled components to have nice css class names
+* Better sourcemaps, not working on the common library at the mo.
+* Cooler webpack stuff like PWA generation etc
