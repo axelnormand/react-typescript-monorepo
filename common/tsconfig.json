@@ -6,7 +6,7 @@
     "outDir": "build/tsc",
     "paths": {
       "src/*": ["src/*"]
-    },
+    }
   },
   "include": ["src/**/*"]
 }
