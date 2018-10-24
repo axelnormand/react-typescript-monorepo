@@ -1,4 +1,4 @@
-const { getStorybookWebpackConfig } = require("../../build/webpack/storybookConfig")
+const { getStorybookWebpackConfig } = require("../../tools/webpack/storybookConfig")
 
 const config = getStorybookWebpackConfig(__dirname);
 

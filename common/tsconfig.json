@@ -3,12 +3,10 @@
   "compilerOptions": {
     "baseUrl": ".", 
     "rootDir": "src",
-    "outDir": "dist/tsc",
+    "outDir": "build/tsc",
     "paths": {
       "src/*": ["src/*"]
     },
-    "noEmitHelpers": false,
-    "importHelpers": false
   },
   "include": ["src/**/*"]
 }

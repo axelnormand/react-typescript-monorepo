@@ -3,19 +3,20 @@
   "description": "Monorepo Common Library",
   "version": "1.0.0",
   "private": true,
-  "typings": "dist/tsc/index.d.ts",
+  "main": "build/tsc/index.js",
+  "typings": "build/tsc/index.d.ts",
   "dependencies": {},
   "scripts": {
-    "clean": "rimraf dist && mkdirp dist",
+    "clean:build": "rimraf build && mkdirp build",
+    "clean:dist": "rimraf dist && mkdirp dist",
     "compile": "tsc",
-    "compile:dts": "node generateDTS.js",
     "start": "tsc --watch",
-    "test": "jest --colors",
+    "test": "jest",
     "lint": "tslint -c ../tslint.json -p tsconfig.json src/**/*.{ts,tsx}",
     "lint:fix": "yarn lint --fix",
     "lint:style": "stylelint src/**/*.{ts,tsx}",
     "storybook": "start-storybook -c .storybook -p 7001",
-    "storybook:build": "build-storybook -c .storybook -o dist/storybook"
+    "storybook:build": "build-storybook -c .storybook -o build/storybook"
   },
   "devDependencies": {
     "dts-generator": "^2.1.0"

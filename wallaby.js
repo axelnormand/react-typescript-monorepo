@@ -12,6 +12,7 @@ module.exports = function(wallaby) {
       '!**/src/**/*.story.tsx',
       '!**/node_modules/**/*',
       '!**/dist/**/*',
+      '!**/build/**/*',
     ],
     tests: ['**/src/**/*.test.{ts,tsx}', '!**/node_modules/**/*'],
     env: { type: 'node', runner: 'node' },

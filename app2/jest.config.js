@@ -1,4 +1,4 @@
-const { getJestConfig } = require("../build/jest/config")
+const { getJestConfig } = require("../tools/jest/config")
 
 const config = getJestConfig(__dirname);
 

@@ -12,24 +12,26 @@
   },
   "scripts": {
     "start": "lerna run start --parallel",
-    "test": "jest --colors",
+    "test": "jest",
     "test:watch": "yarn test --watch",
-    "test:ci": "yarn test --coverage --ci --reporters=default --reporters=jest-junit --reporters=jest-html-reporter",
+    "test:coverage": "yarn test --coverage --ci --reporters=default --reporters=jest-junit --reporters=jest-html-reporter",
+    "test:ci": "yarn compile && yarn test:coverage && yarn lint && yarn lint:style",
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint:fix",
     "lint:style": "lerna run lint:style",
-    "clean": "lerna run clean",
+    "clean:build": "lerna run clean:build && rimraf build && mkdirp build",
+    "clean:dist": "lerna run clean:dist",
     "build": "lerna run build",
-    "compile": "tsc -b common app1 app2",
+    "build:ci": "yarn clean:dist && yarn compile && yarn build && yarn storybook:build",
+    "compile": "tsc -b common components nexus glide portal",
     "compile:watch": "yarn compile --watch",
-    "ci": "yarn clean && yarn tsc && yarn test:ci && yarn lint && yarn lint:style && yarn build",
     "storybook": "lerna run storybook",
     "storybook:build": "lerna run storybook:build"
   },
   "dependencies": {
     "@storybook/addon-actions": "^4.0.0-alpha.22",
     "@storybook/react": "^4.0.0-alpha.22",
-    "@types/react": "^16.4.18",
+    "@types/react": "16.4.16",
     "@types/react-dom": "^16.0.9",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -53,6 +55,7 @@
     "@types/webpack": "^4.4.17",
     "babel-loader": "^8.0.4",
     "babel-plugin-styled-components": "^1.8.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
     "happypack": "^5.0.0",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.1.2",
@@ -76,6 +79,7 @@
     "ts-jest": "^23.10.4",
     "ts-loader": "^5.2.2",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "tslib": "^1.9.3",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
@@ -85,20 +89,18 @@
     "typescript-plugin-styled-components": "^1.0.0",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.21.0",
+    "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
-  },
-  "peerDependencies": {
-    "@types/react": "^16.4.18",
-    "styled-components": "^4.0.2"
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^4.1.4"
   },
   "jest-junit": {
     "suiteName": "Jest Tests",
-    "output": "dist/jest/jestTests.xml"
+    "output": "build/jest/jestTests.xml"
   },
   "jest-html-reporter": {
     "pageTitle": "Jest Tests",
-    "outputPath": "dist/jest/jestTests.html",
+    "outputPath": "build/jest/jestTests.html",
     "includeFailureMsg": true,
     "executionMode": "reporter"
   }

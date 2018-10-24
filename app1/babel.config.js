@@ -1,4 +1,4 @@
-const { getBabelConfig } = require("../build/babel/config")
+const { getBabelConfig } = require("../tools/babel/config")
 
 const config = getBabelConfig();
 

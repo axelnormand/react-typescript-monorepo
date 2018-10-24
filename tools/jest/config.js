@@ -7,16 +7,17 @@ const { pathsToModuleNameMapper } = require('ts-jest/utils');
  */
 const getJestConfig = (projectDir, isRoot) => {
   const getJestPath = filename =>
-    path.join(projectDir, isRoot ? './' : '../', `build/jest/${filename}`);
+    path.join(projectDir, isRoot ? './' : '../', `tools/jest/${filename}`);
 
   //generate paths mapping specified in tsconfig.json so jest can follow those lerna imports
   const tsConfigFile = path.join(projectDir, 'tsconfig.json');
-  const { compilerOptions } = require(tsConfigFile);
-  const tsPaths = compilerOptions.paths
-    ? pathsToModuleNameMapper(compilerOptions.paths, {
-        prefix: `${projectDir}/`,
-      })
-    : {};
+  const tsConfig = require(tsConfigFile);
+  let tsPaths = {};
+  if (tsConfig.compilerOptions && tsConfig.compilerOptions.paths) {
+    tsPaths = pathsToModuleNameMapper(tsConfig.compilerOptions.paths, {
+      prefix: `${projectDir}/`,
+    });
+  }
 
   return {
     globals: {

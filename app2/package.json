@@ -7,15 +7,16 @@
     "@monorepo/common": "^1.0.0"    
   },
   "scripts": {
-    "clean": "rimraf dist && mkdirp dist",
+    "clean:build": "rimraf build && mkdirp build",
+    "clean:dist": "rimraf dist && mkdirp dist",
     "compile": "tsc -b",
-    "start": "webpack-dev-server --mode development --open --port 4001",
-    "test": "jest --colors",
-    "build": "webpack --mode production",
+    "start": "webpack-dev-server --env development --open --port 4001",
+    "test": "jest",
+    "build": "webpack --env production",
     "lint": "tslint -c ../tslint.json -p tsconfig.json src/**/*.{ts,tsx}",
     "lint:fix": "yarn lint --fix",
     "lint:style": "stylelint src/**/*.{ts,tsx}",
     "storybook": "start-storybook -c .storybook -p 4002",
-    "storybook:build": "build-storybook -c .storybook -o dist/storybook"
+    "storybook:build": "build-storybook -c .storybook -o build/storybook"
   }
 }

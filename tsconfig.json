@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "composite": true, 
-    "lib": ["dom", "esnext"],
-    "target": "esnext",
+    "lib": ["dom", "es6", "es7"],
+    "target": "es5",
     "moduleResolution": "node",
     "module": "commonjs",
     "jsx": "react", 
@@ -29,6 +29,6 @@
     "noEmitHelpers": true, 
     "importHelpers": true
   },
-  "exclude": ["**/dist", "node_modules", "**/*.test.ts*", "**/*.story.ts*"],
+  "exclude": ["**/dist", "node_modules"],
   "compileOnSave": true
 }

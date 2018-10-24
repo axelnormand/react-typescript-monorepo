@@ -1,4 +1,4 @@
-const { getWebpackConfig } = require("../build/webpack/config")
+const { getWebpackConfig } = require("../tools/webpack/config")
 
 const config = getWebpackConfig(__dirname);
 
