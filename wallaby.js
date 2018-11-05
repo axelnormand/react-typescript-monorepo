@@ -18,13 +18,16 @@ module.exports = function(wallaby) {
     env: { type: 'node', runner: 'node' },
     testFramework: 'jest',
 
-    // make wallaby following lerna packages
+    // wallaby doesnt support jest multi-projects: https://github.com/wallabyjs/public/issues/1856
+    // therefore re-specify the tsconfig paths mappings as don't have paths in the root tsconfig.json
+    // also to fix the "src/" tsconfig path alias appearing in all the projects, tell wallaby about multiple project roots to search
     setup: () => {
       const jestConfig = require('./jest.config');
       jestConfig.moduleNameMapper = {
         ...jestConfig.moduleNameMapper,
         '^@monorepo/common/(.*)$': '<rootDir>/common/src/$1',        
       };
+      jestConfig.modulePaths = ['<rootDir>/common', '<rootDir>/app1', '<rootDir>/app2']
       wallaby.testFramework.configure(jestConfig);
     },
 
