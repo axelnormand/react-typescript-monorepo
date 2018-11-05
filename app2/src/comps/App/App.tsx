@@ -1,19 +1,15 @@
 import { Header } from '@monorepo/common/comps';
 import { bar } from '@monorepo/common/foo';
 import React from 'react';
-import styled from 'styled-components';
+import WarningText from 'src/comps/WarningText';
 
 const App = () => {
   return (
     <>
       <Header>Welcome to Monorepo Webapp 2!</Header>
-      <InfoText>{bar()}</InfoText>
+      <WarningText>{bar()}</WarningText>
     </>
   );
 };
-
-const InfoText = styled.span`
-  color: #aa11ff;
-`;
 
 export default App;

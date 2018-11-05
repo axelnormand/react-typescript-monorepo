@@ -1,7 +1,7 @@
 import { Header } from '@monorepo/common/comps';
 import { bar } from '@monorepo/common/foo';
 import React from 'react';
-import styled from 'styled-components';
+import InfoText from 'src/comps/InfoText';
 
 const App = () => {
   return (
@@ -11,9 +11,5 @@ const App = () => {
     </>
   );
 };
-
-const InfoText = styled.span`
-  color: #00aacc;
-`;
 
 export default App;

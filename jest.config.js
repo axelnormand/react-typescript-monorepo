@@ -7,11 +7,5 @@ const config = getJestConfig(__dirname, true);
 module.exports = {
   ...config,
   projects: ["common", "app1", "app2"],
-  coverageDirectory: './build/coverage',
-  // collectCoverageFrom: [
-  //   '**/src/**/*.ts',
-  //   '**/src/**/*.tsx',
-  //   '!**/src/**/*.story.tsx',
-  //   '!**src/**/*.d.ts',
-  // ],
+  coverageDirectory: './build/coverage',  
 };
